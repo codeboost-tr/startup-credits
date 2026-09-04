@@ -1,0 +1,30 @@
+{
+ "summary": "ZITADEL startup program added to Sourcey as one entity and one offer, PR #1276.",
+ "observations": [
+  {
+   "what": "entity record",
+   "detail": "PR #1276 adds exactly one file, entities/zi/zitadel.yaml, holding one new entity and one offer. The shard directory and file name both derive from the slug 'zitadel'. sha256 of the file as committed: f2f8788d4ad3782667a168c872a8aa2ae7b2f30cfb17e0ce426f0beb4d448a41.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1276/files",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "first-party source",
+   "detail": "The only source cited is https://zitadel.com/startup, a page on the vendor's own domain. Offer: Financial credits toward ZITADEL Cloud, all Cloud features and direct engineering sessions for the first 12 months. Eligibility: Less than $2M funding, no more than 2 years old, backed by an investor or accelerator.",
+   "url": "https://zitadel.com/startup",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "machine checks",
+   "detail": "Both required checks are green on the pull request head: 'sourcey/validation' success and 'validate catalog change' success. The commit carries a DCO Signed-off-by line matching the commit author.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1276/checks",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "local preflight",
+   "detail": "The pinned Catalog Verifier was run locally before pushing: 'sourcey-catalog-verify validate startup-credits' reports 'Sourcey verification passed (entities: 1, programs: 0, offers: 1)' against the repository root set and the live parent release.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1276",
+   "checked_at": "2026-09-04"
+  }
+ ],
+ "entity_yaml": "schema_version: sourcey.entity-authoring/v1alpha1\nentity:\n  entity_id: ent_01m1nybq8qpz6bpzc6r7wtz2ct\n  slug: zitadel\n  slug_aliases: []\n  name: ZITADEL\n  domains:\n    - value: zitadel.com\n      role: primary\n      valid_from: 2026-09-04T10:19:29.478Z\n  category: auth-security\nprofile:\n  description: ZITADEL is an identity and access management platform providing authentication, authorization, and multi-tenancy for developers as managed cloud or self-hosted software.\n  links:\n    site: https://zitadel.com\nsources:\n  - source_id: src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41\n    url: https://zitadel.com/startup\nprograms: []\noffers:\n  - offer_id: off_01m1nybq8q8qy5kjptseskndca\n    offer_slug: zitadel-startup-program\n    offer_slug_aliases: []\n    title: ZITADEL Startup Program\n    summary: Financial credits toward ZITADEL Cloud plus all Cloud features and direct engineering sessions for the first 12 months of an approved startup's participation.\n    lifecycle:\n      status: active\n      effective_from: 2026-09-04T10:19:29.478Z\n    economics:\n      consideration:\n        kind: unknown\n        description: The source record did not establish separate consideration.\n      benefits:\n        - benefit_id: ben_primary\n          description: Financial credits applied to a ZITADEL Cloud Team account, with all ZITADEL Cloud features available for the first 12 months\n          kind: other\n        - benefit_id: ben_support\n          description: Direct engineering sessions with the ZITADEL team\n          kind: other\n    eligibility:\n      rule:\n        kind: manual\n        criterion_id: cri_requirement_01\n        statement: Company must have less than $2M in funding, be no more than 2 years old, and be backed by an investor or accelerator.\n        reason: not-machine-evaluable\n    roles:\n      terms_authority_entity_id: ent_01m1nybq8qpz6bpzc6r7wtz2ct\n      access_operator_entity_id: ent_01m1nybq8qpz6bpzc6r7wtz2ct\n    access:\n      availability: public\n      method: form\n      url: https://zitadel.com/startup\n      instructions: Verify eligibility, register and submit the startup program form; ZITADEL assesses the application, sends details by email, and applies credits to the Team account.\n    source_ids:\n      - src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41\n"
+}

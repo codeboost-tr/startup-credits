@@ -1,0 +1,30 @@
+{
+ "summary": "Merge startup program added to Sourcey as one entity and one offer, PR #1278.",
+ "observations": [
+  {
+   "what": "entity record",
+   "detail": "PR #1278 adds exactly one file, entities/me/merge.yaml, holding one new entity and one offer. The shard directory and file name both derive from the slug 'merge'. sha256 of the file as committed: c711ad33d54179f66de40008b71d3668e152e9b92136c6c31237643bbe9ef945.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1278/files",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "first-party source",
+   "detail": "The only source cited is https://www.merge.dev/offers/startup-program, a page on the vendor's own domain. Offer: $2,000 in Merge Gateway credits, $5,000 off Merge Unified, and a dedicated solutions architect. Eligibility: Approved venture-backed startups; the offer applies upon approval.",
+   "url": "https://www.merge.dev/offers/startup-program",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "machine checks",
+   "detail": "Both required checks are green on the pull request head: 'sourcey/validation' success and 'validate catalog change' success. The commit carries a DCO Signed-off-by line matching the commit author.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1278/checks",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "local preflight",
+   "detail": "The pinned Catalog Verifier was run locally before pushing: 'sourcey-catalog-verify validate startup-credits' reports 'Sourcey verification passed (entities: 1, programs: 0, offers: 1)' against the repository root set and the live parent release.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1278",
+   "checked_at": "2026-09-04"
+  }
+ ],
+ "entity_yaml": "schema_version: sourcey.entity-authoring/v1alpha1\nentity:\n  entity_id: ent_01m1nybq8qxv0h72qe621e9xvh\n  slug: merge\n  slug_aliases: []\n  name: Merge\n  domains:\n    - value: merge.dev\n      role: primary\n      valid_from: 2026-09-04T10:19:29.478Z\n  category: apis-integration\nprofile:\n  description: Merge is a unified API platform that lets software companies ship customer-facing integrations across HR, accounting, CRM, ticketing, and file storage systems through one API.\n  links:\n    site: https://www.merge.dev\nsources:\n  - source_id: src_78bf237fbde685340bf74ca6ec44e427d5ee1b97ac30a5b35cc61fc337fec37f\n    url: https://www.merge.dev/offers/startup-program\nprograms: []\noffers:\n  - offer_id: off_01m1nybq8qcrns8j6qzsea4a6b\n    offer_slug: merge-startup-program\n    offer_slug_aliases: []\n    title: Merge Startup Program\n    summary: Approved venture-backed startups receive $2,000 in Merge Gateway credits, $5,000 off Merge Unified, and a dedicated solutions architect for setup or migration.\n    lifecycle:\n      status: active\n      effective_from: 2026-09-04T10:19:29.478Z\n    economics:\n      consideration:\n        kind: unknown\n        description: The source record did not establish separate consideration.\n      benefits:\n        - benefit_id: ben_gateway_credits\n          description: $2,000 in Merge Gateway credits\n          kind: credit\n          value:\n            amount:\n              currency: USD\n              minor_units: 200000\n            kind: exact\n        - benefit_id: ben_unified_discount\n          description: $5,000 off Merge Unified\n          kind: other\n        - benefit_id: ben_architect\n          description: Dedicated solutions architect to help with set up or migration\n          kind: other\n    eligibility:\n      rule:\n        kind: manual\n        criterion_id: cri_requirement_01\n        statement: Open to approved venture-backed startups; the offer applies upon approval by Merge.\n        reason: not-machine-evaluable\n    roles:\n      terms_authority_entity_id: ent_01m1nybq8qxv0h72qe621e9xvh\n      access_operator_entity_id: ent_01m1nybq8qxv0h72qe621e9xvh\n    access:\n      availability: public\n      method: form\n      url: https://www.merge.dev/offers/startup-program\n      instructions: Submit the startup program form on the offer page; a Merge representative follows up by email with a confirmation.\n    source_ids:\n      - src_78bf237fbde685340bf74ca6ec44e427d5ee1b97ac30a5b35cc61fc337fec37f\n"
+}

@@ -1,0 +1,30 @@
+{
+ "summary": "Hanko startup program added to Sourcey as one entity and one offer, PR #1280.",
+ "observations": [
+  {
+   "what": "entity record",
+   "detail": "PR #1280 adds exactly one file, entities/ha/hanko.yaml, holding one new entity and one offer. The shard directory and file name both derive from the slug 'hanko'. sha256 of the file as committed: 09e27a98ccf0fd6604910407ba955d1180808cfea232d82f19992dfc67750cb2.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1280/files",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "first-party source",
+   "detail": "The only source cited is https://www.hanko.io/startup-plan, a page on the vendor's own domain. Offer: One million free monthly active users for a Hanko Cloud organization, plus free consulting and setup support. Eligibility: For life or until the startup passes $500k ARR or raises more than $1M in VC funding.",
+   "url": "https://www.hanko.io/startup-plan",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "machine checks",
+   "detail": "Both required checks are green on the pull request head: 'sourcey/validation' success and 'validate catalog change' success. The commit carries a DCO Signed-off-by line matching the commit author.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1280/checks",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "local preflight",
+   "detail": "The pinned Catalog Verifier was run locally before pushing: 'sourcey-catalog-verify validate startup-credits' reports 'Sourcey verification passed (entities: 1, programs: 0, offers: 1)' against the repository root set and the live parent release.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1280",
+   "checked_at": "2026-09-04"
+  }
+ ],
+ "entity_yaml": "schema_version: sourcey.entity-authoring/v1alpha1\nentity:\n  entity_id: ent_01m1nybq8qvtar05tbggk70yye\n  slug: hanko\n  slug_aliases: []\n  name: Hanko\n  domains:\n    - value: hanko.io\n      role: primary\n      valid_from: 2026-09-04T10:19:29.478Z\n  category: auth-security\nprofile:\n  description: Hanko provides passkey-first authentication infrastructure with hosted login flows, user management, and an identity API for web and mobile applications.\n  links:\n    site: https://www.hanko.io\nsources:\n  - source_id: src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e\n    url: https://www.hanko.io/startup-plan\nprograms: []\noffers:\n  - offer_id: off_01m1nybq8q5c6ygc8m7tc6pgm0\n    offer_slug: hanko-startup-plan\n    offer_slug_aliases: []\n    title: Hanko Startup Plan\n    summary: One million free monthly active users on a Hanko Cloud organization, held for life or until the startup passes $500k ARR or raises more than $1M in VC funding.\n    lifecycle:\n      status: active\n      effective_from: 2026-09-04T10:19:29.478Z\n    economics:\n      consideration:\n        kind: unknown\n        description: The source record did not establish separate consideration.\n      benefits:\n        - benefit_id: ben_primary\n          description: One million free monthly active users for a Hanko Cloud organization on the Free plan or a Pro subscription\n          kind: free-service\n          service: Hanko Cloud monthly active users\n        - benefit_id: ben_support\n          description: Free consulting and setup support, plus a backlink from Hanko's case study page\n          kind: other\n    eligibility:\n      rule:\n        kind: manual\n        criterion_id: cri_requirement_01\n        statement: Applies for life or until the startup generates more than $500k in ARR or receives more than $1M in VC funding.\n        reason: not-machine-evaluable\n    roles:\n      terms_authority_entity_id: ent_01m1nybq8qvtar05tbggk70yye\n      access_operator_entity_id: ent_01m1nybq8qvtar05tbggk70yye\n    access:\n      availability: public\n      method: form\n      url: https://www.hanko.io/startup-plan\n      instructions: Submit the startup plan form with name, email, company website, message, and the Hanko Cloud organization ID when one already exists.\n    source_ids:\n      - src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e\n"
+}

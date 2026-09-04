@@ -1,0 +1,30 @@
+{
+ "summary": "fal startup program added to Sourcey as one entity and one offer, PR #1282.",
+ "observations": [
+  {
+   "what": "entity record",
+   "detail": "PR #1282 adds exactly one file, entities/fa/fal.yaml, holding one new entity and one offer. The shard directory and file name both derive from the slug 'fal'. sha256 of the file as committed: 38d5266a21177a1bc2afe2c80eac0a45c32476ae4ff717425d76040951d488f3.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1282/files",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "first-party source",
+   "detail": "The only source cited is https://fal.ai/startup-program, a page on the vendor's own domain. Offer: $1,000 in fal credits on the Startup tier, the default entry point for approved teams. Eligibility: Proven traction or institutional VC backing; open to teams based in Europe and Asia.",
+   "url": "https://fal.ai/startup-program",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "machine checks",
+   "detail": "Both required checks are green on the pull request head: 'sourcey/validation' success and 'validate catalog change' success. The commit carries a DCO Signed-off-by line matching the commit author.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1282/checks",
+   "checked_at": "2026-09-04"
+  },
+  {
+   "what": "local preflight",
+   "detail": "The pinned Catalog Verifier was run locally before pushing: 'sourcey-catalog-verify validate startup-credits' reports 'Sourcey verification passed (entities: 1, programs: 0, offers: 1)' against the repository root set and the live parent release.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1282",
+   "checked_at": "2026-09-04"
+  }
+ ],
+ "entity_yaml": "schema_version: sourcey.entity-authoring/v1alpha1\nentity:\n  entity_id: ent_01m1nybq8qz70r57y28xsebp99\n  slug: fal\n  slug_aliases: []\n  name: fal\n  domains:\n    - value: fal.ai\n      role: primary\n      valid_from: 2026-09-04T10:19:29.478Z\n  category: ai-ml\nprofile:\n  description: fal is a generative media platform that runs diffusion and audio models on its own inference engine and exposes them to developers as an image, video, and audio API.\n  links:\n    site: https://fal.ai\nsources:\n  - source_id: src_2e49309e95a829b0f64b981067b37955ef43d47a45f6745a39bd3b6695d0d551\n    url: https://fal.ai/startup-program\nprograms: []\noffers:\n  - offer_id: off_01m1nybq8qppwb6x9saks5pheb\n    offer_slug: fal-startup-program-startup-tier\n    offer_slug_aliases: []\n    title: fal Startup Program - Startup tier\n    summary: $1,000 in fal credits as the default entry point for every approved team, open to startups in Europe and Asia with proven traction or institutional VC backing.\n    description: The Startup tier is the default entry point for approved teams. fal publishes two further tiers on the same page, Scale and Growth, which unlock at monthly spend thresholds and carry their own credit amounts.\n    lifecycle:\n      status: active\n      effective_from: 2026-09-04T10:19:29.478Z\n    economics:\n      consideration:\n        kind: unknown\n        description: The source record did not establish separate consideration.\n      benefits:\n        - benefit_id: ben_primary\n          description: $1,000 in fal credits\n          kind: credit\n          value:\n            amount:\n              currency: USD\n              minor_units: 100000\n            kind: exact\n    eligibility:\n      rule:\n        kind: manual\n        criterion_id: cri_requirement_01\n        statement: Team must show a proven track record of real users, meaningful traction, or revenue, or be VC-backed by an institutional investor; open to teams based in Europe and Asia, with one application per company every three months and no reselling or transferring.\n        reason: not-machine-evaluable\n    roles:\n      terms_authority_entity_id: ent_01m1nybq8qz70r57y28xsebp99\n      access_operator_entity_id: ent_01m1nybq8qz70r57y28xsebp99\n    access:\n      availability: public\n      method: form\n      url: https://fal.ai/startup-program\n      instructions: Create a free fal account or sign in, share company details and fal usage plans, add a referral code when one applies, then meet the team for an introductory call.\n    source_ids:\n      - src_2e49309e95a829b0f64b981067b37955ef43d47a45f6745a39bd3b6695d0d551\n"
+}

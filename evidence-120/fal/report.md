@@ -1,0 +1,73 @@
+# fal startup program - Sourcey entity record
+
+- **Pull request**: https://github.com/sourcey/startup-credits/pull/1282 adds one file, `entities/fa/fal.yaml`, with one new entity and exactly one offer. No code, no schema, no generated output, no unrelated files.
+- **Offer**: $1,000 in fal credits on the Startup tier, the default entry point for approved teams.
+- **Eligibility**: Proven traction or institutional VC backing; open to teams based in Europe and Asia.
+- **Source**: https://fal.ai/startup-program is the only cited source and is a page on the vendor's own domain. It was fetched and returned HTTP 200 on 2026-09-04. No directory or aggregator listing is cited.
+- **Identity path**: the slug is `fal`, so the record sits at `entities/fa/fal.yaml`, shard and file name both derived from the slug. Fresh `ent_` and `off_` ULIDs, one file-local `source_id`.
+- **Machine checks**: `sourcey/validation` success and `validate catalog change` success on the pull request head; the commit carries a DCO `Signed-off-by` line.
+- **Local preflight**: the pinned Catalog Verifier reports `Sourcey verification passed (entities: 1, programs: 0, offers: 1)` against the repository root set and the live parent release.
+- **sha256 of the entity file**: `38d5266a21177a1bc2afe2c80eac0a45c32476ae4ff717425d76040951d488f3`
+
+## Entity YAML as committed
+
+```yaml
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m1nybq8qz70r57y28xsebp99
+  slug: fal
+  slug_aliases: []
+  name: fal
+  domains:
+    - value: fal.ai
+      role: primary
+      valid_from: 2026-09-04T10:19:29.478Z
+  category: ai-ml
+profile:
+  description: fal is a generative media platform that runs diffusion and audio models on its own inference engine and exposes them to developers as an image, video, and audio API.
+  links:
+    site: https://fal.ai
+sources:
+  - source_id: src_2e49309e95a829b0f64b981067b37955ef43d47a45f6745a39bd3b6695d0d551
+    url: https://fal.ai/startup-program
+programs: []
+offers:
+  - offer_id: off_01m1nybq8qppwb6x9saks5pheb
+    offer_slug: fal-startup-program-startup-tier
+    offer_slug_aliases: []
+    title: fal Startup Program - Startup tier
+    summary: $1,000 in fal credits as the default entry point for every approved team, open to startups in Europe and Asia with proven traction or institutional VC backing.
+    description: The Startup tier is the default entry point for approved teams. fal publishes two further tiers on the same page, Scale and Growth, which unlock at monthly spend thresholds and carry their own credit amounts.
+    lifecycle:
+      status: active
+      effective_from: 2026-09-04T10:19:29.478Z
+    economics:
+      consideration:
+        kind: unknown
+        description: The source record did not establish separate consideration.
+      benefits:
+        - benefit_id: ben_primary
+          description: $1,000 in fal credits
+          kind: credit
+          value:
+            amount:
+              currency: USD
+              minor_units: 100000
+            kind: exact
+    eligibility:
+      rule:
+        kind: manual
+        criterion_id: cri_requirement_01
+        statement: Team must show a proven track record of real users, meaningful traction, or revenue, or be VC-backed by an institutional investor; open to teams based in Europe and Asia, with one application per company every three months and no reselling or transferring.
+        reason: not-machine-evaluable
+    roles:
+      terms_authority_entity_id: ent_01m1nybq8qz70r57y28xsebp99
+      access_operator_entity_id: ent_01m1nybq8qz70r57y28xsebp99
+    access:
+      availability: public
+      method: form
+      url: https://fal.ai/startup-program
+      instructions: Create a free fal account or sign in, share company details and fal usage plans, add a referral code when one applies, then meet the team for an introductory call.
+    source_ids:
+      - src_2e49309e95a829b0f64b981067b37955ef43d47a45f6745a39bd3b6695d0d551
+```
