@@ -10,6 +10,7 @@ entity:
       valid_from: 2026-09-04T10:19:29.478Z
   category: apis-integration
 profile:
+  summary: Merge provides one API to ship customer-facing integrations across hundreds of apps, pre-built tools for AI agents, and a gateway that routes every LLM through one API.
   description: Merge is a unified API platform that lets software companies ship customer-facing integrations across HR, accounting, CRM, ticketing, and file storage systems through one API.
   links:
     site: https://www.merge.dev
@@ -22,17 +23,16 @@ offers:
     offer_slug: merge-startup-program
     offer_slug_aliases: []
     title: Merge Startup Program
-    summary: Approved venture-backed startups receive $2,000 in Merge Gateway credits, $5,000 off Merge Unified, and a dedicated solutions architect for setup or migration.
+    summary: Approved venture-backed startups get $2000 in credits for Merge Gateway, $5000 off Merge Unified and Merge Agent Handler, and a dedicated solutions architect to help with set up and/or migration.
     lifecycle:
       status: active
       effective_from: 2026-09-04T10:19:29.478Z
     economics:
       consideration:
-        kind: unknown
-        description: The source record did not establish separate consideration.
+        kind: none
       benefits:
         - benefit_id: ben_gateway_credits
-          description: $2,000 in Merge Gateway credits
+          description: $2000 in credits for Merge Gateway
           kind: credit
           value:
             amount:
@@ -40,10 +40,10 @@ offers:
               minor_units: 200000
             kind: exact
         - benefit_id: ben_unified_discount
-          description: $5,000 off Merge Unified
+          description: $5000 off Merge Unified and Merge Agent Handler
           kind: other
         - benefit_id: ben_architect
-          description: Dedicated solutions architect to help with set up or migration
+          description: A dedicated solutions architect to help with set up and/or migration
           kind: other
     eligibility:
       rule:
