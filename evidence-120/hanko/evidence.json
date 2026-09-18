@@ -1,30 +1,43 @@
 {
- "summary": "Hanko startup program added to Sourcey as one entity and one offer, PR #1280.",
+ "summary": "Hanko Startup Plan added to Sourcey as one entity and one offer; PR #1280 merged and the vendor record is live at https://sourcey.com/c/hanko.",
+ "source_url": "https://github.com/sourcey/startup-credits/pull/1280",
  "observations": [
   {
+   "what": "merged pull request",
+   "detail": "PR #1280 was merged into sourcey/startup-credits on 2026-09-18T08:46:27Z by sourcey[bot]. Head commit b852abfc437e9bc8c323c2727fe1e9a219c1e704, merge commit 6b3be107. The pull request is authored by GitHub user codeboost-tr, the claimant's verified GitHub identity.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1280",
+   "checked_at": "2026-09-18"
+  },
+  {
    "what": "entity record",
-   "detail": "PR #1280 adds exactly one file, entities/ha/hanko.yaml, holding one new entity and one offer. The shard directory and file name both derive from the slug 'hanko'. sha256 of the file as committed: 09e27a98ccf0fd6604910407ba955d1180808cfea232d82f19992dfc67750cb2.",
-   "url": "https://github.com/sourcey/startup-credits/pull/1280/files",
-   "checked_at": "2026-09-04"
+   "detail": "The merge adds exactly one file, entities/ha/hanko.yaml, holding one new entity (slug hanko, shard ha) and exactly one offer. No other file is touched, so the change is data-only. sha256 of the file at merge commit 6b3be107: 066ad0fe5ac5c876928ba0838c7c6c532c6812875b6eb97bad44f6ebdb90b35c.",
+   "url": "https://raw.githubusercontent.com/sourcey/startup-credits/6b3be107/entities/ha/hanko.yaml",
+   "checked_at": "2026-09-18"
   },
   {
    "what": "first-party source",
-   "detail": "The only source cited is https://www.hanko.io/startup-plan, a page on the vendor's own domain. Offer: One million free monthly active users for a Hanko Cloud organization, plus free consulting and setup support. Eligibility: For life or until the startup passes $500k ARR or raises more than $1M in VC funding.",
+   "detail": "The only cited source is https://www.hanko.io/startup-plan, a page on the vendor's own domain. Fetched at HTTP 200 on 2026-09-18 and it still states the offer: one million free monthly active users for the startup's Hanko Cloud organization (Free plan or Pro subscription), free consulting and setup support, and backlinks from Hanko's case study page, held for life or until the startup generates more than $500k ARR or receives more than $1M in VC funding. This is a startup-specific program, not a generic free tier or trial: the Hanko Cloud Free tier's MAU limit is raised to 1 million only under the Startup Plan, which is applied for and granted case by case.",
    "url": "https://www.hanko.io/startup-plan",
-   "checked_at": "2026-09-04"
+   "checked_at": "2026-09-18"
   },
   {
    "what": "machine checks",
-   "detail": "Both required checks are green on the pull request head: 'sourcey/validation' success and 'validate catalog change' success. The commit carries a DCO Signed-off-by line matching the commit author.",
+   "detail": "All three checks are green on head b852abfc: sourcey/admission success ('Sourcey admission passed'), sourcey/validation success ('Sourcey Catalog validation success'), and 'validate catalog change' success. Every commit on the branch carries a DCO Signed-off-by line matching the commit author codeboost-tr <codeboost.tr@gmail.com>.",
    "url": "https://github.com/sourcey/startup-credits/pull/1280/checks",
-   "checked_at": "2026-09-04"
+   "checked_at": "2026-09-18"
   },
   {
-   "what": "local preflight",
-   "detail": "The pinned Catalog Verifier was run locally before pushing: 'sourcey-catalog-verify validate startup-credits' reports 'Sourcey verification passed (entities: 1, programs: 0, offers: 1)' against the repository root set and the live parent release.",
-   "url": "https://github.com/sourcey/startup-credits/pull/1280",
-   "checked_at": "2026-09-04"
+   "what": "live Sourcey surface",
+   "detail": "https://sourcey.com/c/hanko returns HTTP 200 and renders the company record: name Hanko, category 'Auth and security', domain www.hanko.io, '1 offer' titled 'Hanko Startup Plan', with provenance 'observed 18 Sept', entity revision sha256:01de679c2c3a... and offer revision sha256:84e89d170d04.... Publication therefore completed after the merge.",
+   "url": "https://sourcey.com/c/hanko",
+   "checked_at": "2026-09-18"
+  },
+  {
+   "what": "admission evidence review",
+   "detail": "Sourcey's admission gate reported 'needs revision' twice before passing, and both findings were fixed on the same pull request rather than papered over: first claim_unsupported plus entity_summary_required (profile.summary added, consideration encoded as kind: none, benefits split one per source bullet, the free service named as Hanko Cloud), then claim_contradicted on the backlinks benefit (its description now quotes the cited sentence). The final run admitted every published economics, eligibility, lifecycle, domain, link and access fact.",
+   "url": "https://github.com/sourcey/startup-credits/pull/1280/commits",
+   "checked_at": "2026-09-18"
   }
  ],
- "entity_yaml": "schema_version: sourcey.entity-authoring/v1alpha1\nentity:\n  entity_id: ent_01m1nybq8qvtar05tbggk70yye\n  slug: hanko\n  slug_aliases: []\n  name: Hanko\n  domains:\n    - value: hanko.io\n      role: primary\n      valid_from: 2026-09-04T10:19:29.478Z\n  category: auth-security\nprofile:\n  description: Hanko provides passkey-first authentication infrastructure with hosted login flows, user management, and an identity API for web and mobile applications.\n  links:\n    site: https://www.hanko.io\nsources:\n  - source_id: src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e\n    url: https://www.hanko.io/startup-plan\nprograms: []\noffers:\n  - offer_id: off_01m1nybq8q5c6ygc8m7tc6pgm0\n    offer_slug: hanko-startup-plan\n    offer_slug_aliases: []\n    title: Hanko Startup Plan\n    summary: One million free monthly active users on a Hanko Cloud organization, held for life or until the startup passes $500k ARR or raises more than $1M in VC funding.\n    lifecycle:\n      status: active\n      effective_from: 2026-09-04T10:19:29.478Z\n    economics:\n      consideration:\n        kind: unknown\n        description: The source record did not establish separate consideration.\n      benefits:\n        - benefit_id: ben_primary\n          description: One million free monthly active users for a Hanko Cloud organization on the Free plan or a Pro subscription\n          kind: free-service\n          service: Hanko Cloud monthly active users\n        - benefit_id: ben_support\n          description: Free consulting and setup support, plus a backlink from Hanko's case study page\n          kind: other\n    eligibility:\n      rule:\n        kind: manual\n        criterion_id: cri_requirement_01\n        statement: Applies for life or until the startup generates more than $500k in ARR or receives more than $1M in VC funding.\n        reason: not-machine-evaluable\n    roles:\n      terms_authority_entity_id: ent_01m1nybq8qvtar05tbggk70yye\n      access_operator_entity_id: ent_01m1nybq8qvtar05tbggk70yye\n    access:\n      availability: public\n      method: form\n      url: https://www.hanko.io/startup-plan\n      instructions: Submit the startup plan form with name, email, company website, message, and the Hanko Cloud organization ID when one already exists.\n    source_ids:\n      - src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e\n"
+ "entity_yaml": "schema_version: sourcey.entity-authoring/v1alpha1\nentity:\n  entity_id: ent_01m1nybq8qvtar05tbggk70yye\n  slug: hanko\n  slug_aliases: []\n  name: Hanko\n  domains:\n    - value: hanko.io\n      role: primary\n      valid_from: 2026-09-04T10:19:29.478Z\n  category: auth-security\nprofile:\n  summary: Hanko is an open-source authentication company. Its Hanko Cloud service covers login and user management, with pre-built Hanko Elements UI components and a Flow API for teams that want to build their own frontend.\n  description: Hanko provides passkey-first authentication infrastructure with hosted login flows, user management, and an identity API for web and mobile applications.\n  links:\n    site: https://www.hanko.io\nsources:\n  - source_id: src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e\n    url: https://www.hanko.io/startup-plan\nprograms: []\noffers:\n  - offer_id: off_01m1nybq8q5c6ygc8m7tc6pgm0\n    offer_slug: hanko-startup-plan\n    offer_slug_aliases: []\n    title: Hanko Startup Plan\n    summary: One million free monthly active users on a Hanko Cloud organization, held for life or until the startup passes $500k ARR or raises more than $1M in VC funding.\n    lifecycle:\n      status: active\n      effective_from: 2026-09-04T10:19:29.478Z\n    economics:\n      consideration:\n        kind: none\n      benefits:\n        - benefit_id: ben_primary\n          description: One million free monthly active users for the startup's Hanko Cloud organization, on the Free plan or a Pro subscription\n          kind: free-service\n          service: Hanko Cloud\n        - benefit_id: ben_support\n          description: Free consulting and setup support\n          kind: other\n        - benefit_id: ben_backlinks\n          description: Backlinks from our case study page to your domain to help with SEO\n          kind: other\n    eligibility:\n      rule:\n        kind: manual\n        criterion_id: cri_requirement_01\n        statement: Applies for life or until the startup generates more than $500k in ARR or receives more than $1M in VC funding.\n        reason: not-machine-evaluable\n    roles:\n      terms_authority_entity_id: ent_01m1nybq8qvtar05tbggk70yye\n      access_operator_entity_id: ent_01m1nybq8qvtar05tbggk70yye\n    access:\n      availability: public\n      method: form\n      url: https://www.hanko.io/startup-plan\n      instructions: Submit the startup plan form with name, email, company website, message, and the Hanko Cloud organization ID when one already exists.\n    source_ids:\n      - src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e\n"
 }
