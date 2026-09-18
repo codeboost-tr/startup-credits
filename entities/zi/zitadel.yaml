@@ -17,6 +17,8 @@ profile:
 sources:
   - source_id: src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41
     url: https://zitadel.com/startup
+  - source_id: src_e794754cd80e05b7c556e42bfd926db58ca7e9930434c6eefd7edc6502a7d653
+    url: https://zitadel.com/pricing
 programs: []
 offers:
   - offer_id: off_01m1nybq8q8qy5kjptseskndca
@@ -29,8 +31,8 @@ offers:
       effective_from: 2026-09-04T10:19:29.478Z
     economics:
       consideration:
-        kind: unknown
-        description: The program page does not state separate fees or other consideration for applying.
+        kind: variable
+        description: The startup pays the ZITADEL Cloud plan price beyond the financial credits; the public list price is US$100 per month for Pro, with Free at US$0 per month and Enterprise priced custom.
       benefits:
         - benefit_id: ben_cloud_features
           description: Use all features of ZITADEL Cloud
@@ -57,3 +59,4 @@ offers:
       instructions: Verify eligibility, register and submit the startup program form; ZITADEL assesses the application, sends details by email, and applies credits to the Team account.
     source_ids:
       - src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41
+      - src_e794754cd80e05b7c556e42bfd926db58ca7e9930434c6eefd7edc6502a7d653
