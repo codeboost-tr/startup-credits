@@ -39,7 +39,7 @@ offers:
           description: Free consulting and setup support
           kind: other
         - benefit_id: ben_backlinks
-          description: Backlinks from Hanko's case study page to the startup's domain to help with SEO
+          description: Backlinks from our case study page to your domain to help with SEO
           kind: other
     eligibility:
       rule:
