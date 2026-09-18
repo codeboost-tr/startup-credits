@@ -1,71 +1,40 @@
-# Hanko startup program - Sourcey entity record
+# Frantic #120 - Hanko Startup Plan
 
-- **Pull request**: https://github.com/sourcey/startup-credits/pull/1280 adds one file, `entities/ha/hanko.yaml`, with one new entity and exactly one offer. No code, no schema, no generated output, no unrelated files.
-- **Offer**: One million free monthly active users for a Hanko Cloud organization, plus free consulting and setup support.
-- **Eligibility**: For life or until the startup passes $500k ARR or raises more than $1M in VC funding.
-- **Source**: https://www.hanko.io/startup-plan is the only cited source and is a page on the vendor's own domain. It was fetched and returned HTTP 200 on 2026-09-04. No directory or aggregator listing is cited.
-- **Identity path**: the slug is `hanko`, so the record sits at `entities/ha/hanko.yaml`, shard and file name both derived from the slug. Fresh `ent_` and `off_` ULIDs, one file-local `source_id`.
-- **Machine checks**: `sourcey/validation` success and `validate catalog change` success on the pull request head; the commit carries a DCO `Signed-off-by` line.
-- **Local preflight**: the pinned Catalog Verifier reports `Sourcey verification passed (entities: 1, programs: 0, offers: 1)` against the repository root set and the live parent release.
-- **sha256 of the entity file**: `09e27a98ccf0fd6604910407ba955d1180808cfea232d82f19992dfc67750cb2`
+One new vendor and one new offer contributed to `sourcey/startup-credits` as a
+data-only pull request, merged and live on the Sourcey catalog.
 
-## Entity YAML as committed
-
-```yaml
-schema_version: sourcey.entity-authoring/v1alpha1
-entity:
-  entity_id: ent_01m1nybq8qvtar05tbggk70yye
-  slug: hanko
-  slug_aliases: []
-  name: Hanko
-  domains:
-    - value: hanko.io
-      role: primary
-      valid_from: 2026-09-04T10:19:29.478Z
-  category: auth-security
-profile:
-  description: Hanko provides passkey-first authentication infrastructure with hosted login flows, user management, and an identity API for web and mobile applications.
-  links:
-    site: https://www.hanko.io
-sources:
-  - source_id: src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e
-    url: https://www.hanko.io/startup-plan
-programs: []
-offers:
-  - offer_id: off_01m1nybq8q5c6ygc8m7tc6pgm0
-    offer_slug: hanko-startup-plan
-    offer_slug_aliases: []
-    title: Hanko Startup Plan
-    summary: One million free monthly active users on a Hanko Cloud organization, held for life or until the startup passes $500k ARR or raises more than $1M in VC funding.
-    lifecycle:
-      status: active
-      effective_from: 2026-09-04T10:19:29.478Z
-    economics:
-      consideration:
-        kind: unknown
-        description: The source record did not establish separate consideration.
-      benefits:
-        - benefit_id: ben_primary
-          description: One million free monthly active users for a Hanko Cloud organization on the Free plan or a Pro subscription
-          kind: free-service
-          service: Hanko Cloud monthly active users
-        - benefit_id: ben_support
-          description: Free consulting and setup support, plus a backlink from Hanko's case study page
-          kind: other
-    eligibility:
-      rule:
-        kind: manual
-        criterion_id: cri_requirement_01
-        statement: Applies for life or until the startup generates more than $500k in ARR or receives more than $1M in VC funding.
-        reason: not-machine-evaluable
-    roles:
-      terms_authority_entity_id: ent_01m1nybq8qvtar05tbggk70yye
-      access_operator_entity_id: ent_01m1nybq8qvtar05tbggk70yye
-    access:
-      availability: public
-      method: form
-      url: https://www.hanko.io/startup-plan
-      instructions: Submit the startup plan form with name, email, company website, message, and the Hanko Cloud organization ID when one already exists.
-    source_ids:
-      - src_cc26ce4582876cab63a36fd6e38a0435fc7d85f16a459af1f85ccac2d0c9497e
-```
+- **Merged pull request, authored by the claimant.** [PR #1280](https://github.com/sourcey/startup-credits/pull/1280)
+  was merged into `main` on 2026-09-18T08:46:27Z (head `b852abfc`, merge commit `6b3be107`),
+  authored by GitHub user `codeboost-tr`, the claimant's verified GitHub identity.
+- **One new vendor, one new offer, data only.** The merge adds exactly one file,
+  [`entities/ha/hanko.yaml`](https://raw.githubusercontent.com/sourcey/startup-credits/6b3be107/entities/ha/hanko.yaml)
+  (`sha256:066ad0fe5ac5c876928ba0838c7c6c532c6812875b6eb97bad44f6ebdb90b35c`), whose path
+  follows the identity-derived shard rule (slug `hanko` -> `entities/ha/hanko.yaml`). It carries
+  one entity and exactly one offer, with fresh `ent_`/`off_` ULIDs and one file-local `source_id`.
+  No documentation, workflow or code file is touched.
+- **Genuinely useful, currently available, startup-specific offer.** The Hanko Startup Plan gives
+  one million free monthly active users on a Hanko Cloud organization (Free plan or Pro
+  subscription), free consulting and setup support, and backlinks from Hanko's case study page,
+  held for life or until the startup passes $500k ARR or raises more than $1M in VC funding.
+  It is not a generic free tier or an ordinary trial: the Free tier's MAU limit is raised to
+  1 million only for startups accepted onto the plan, which is applied for through a form.
+- **First-party source, verified live.** The only cited source is
+  <https://www.hanko.io/startup-plan>, on the vendor's own domain - not an aggregator, directory
+  or affiliate listing. Refetched at HTTP 200 on 2026-09-18 with every figure in the record still
+  present on the page.
+- **CI, verifier and DCO all green.** On head `b852abfc`: `sourcey/admission` success
+  ("Sourcey admission passed"), `sourcey/validation` success, `validate catalog change` success.
+  Every commit carries `Signed-off-by: codeboost-tr <codeboost.tr@gmail.com>`.
+- **Live on the Sourcey surface.** <https://sourcey.com/c/hanko> returns HTTP 200 and renders the
+  record - Hanko, "Auth and security", www.hanko.io, 1 offer "Hanko Startup Plan" - with
+  provenance "observed 18 Sept", entity revision `sha256:01de679c2c3a...` and offer revision
+  `sha256:84e89d170d04...`.
+- **Evidence review findings were fixed, not argued around.** Admission returned "needs revision"
+  twice. The first run flagged `claim_unsupported` and `entity_summary_required`: `profile.summary`
+  was missing, `consideration` declared `kind: unknown` with a description conceding the source did
+  not establish it, two distinct source bullets were merged into one benefit, and the
+  `free-service` named a service string that does not appear on the page. Those were corrected in
+  commit `d1964b87`, taking supported claims from 20/30 to 28/32. The second run flagged
+  `claim_contradicted` on the remaining benefit; its bound source range hashes to the sentence
+  "Backlinks from our case study page to your domain to help with SEO", so commit `b852abfc` made
+  the description quote that sentence. The third run admitted every fact.
