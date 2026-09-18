@@ -32,13 +32,13 @@ offers:
         kind: none
       benefits:
         - benefit_id: ben_cloud_features
-          description: Use all features of ZITADEL Cloud in the first 12 months
+          description: Use all features of ZITADEL Cloud
           kind: other
         - benefit_id: ben_engineers
-          description: Talk directly to ZITADEL engineers in the first 12 months
+          description: Talk directly to our engineers
           kind: other
         - benefit_id: ben_financial_credits
-          description: Financial credits applied to your ZITADEL Cloud Team in the first 12 months
+          description: Financial credits
           kind: other
     eligibility:
       rule:
@@ -54,6 +54,5 @@ offers:
       method: form
       url: https://share-eu1.hsforms.com/1JgHRqQyXRXic8xlGUVMzRA2dljbt
       instructions: Verify eligibility, register and submit the startup program form; ZITADEL assesses the application, sends details by email, and applies credits to the Team account.
-    terms_url: https://zitadel.com/startup
     source_ids:
       - src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41
