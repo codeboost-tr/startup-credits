@@ -38,3 +38,26 @@ data-only pull request, merged and live on the Sourcey catalog.
   `claim_contradicted` on the remaining benefit; its bound source range hashes to the sentence
   "Backlinks from our case study page to your domain to help with SEO", so commit `b852abfc` made
   the description quote that sentence. The third run admitted every fact.
+
+## Why this claim carries the Hanko record
+
+This claim was first delivered with ZITADEL
+([PR #1276](https://github.com/sourcey/startup-credits/pull/1276)) on 2026-09-04. That pull
+request cannot reach the merged-and-live state this bounty requires, for a reason outside the
+contributor's control: Sourcey's admission gate reports an `exact_conflict` against
+[PR #1488](https://github.com/sourcey/startup-credits/pull/1488), a separate open pull request
+proposing the same ZITADEL entity. Both submissions are open and both are rejected by admission
+while the duplicate stands, so neither can merge until a maintainer picks one. PR #1276 was opened
+2026-09-04T10:20:43Z and PR #1488 on 2026-09-07T07:59:40Z; the earlier-submission precedent
+applied when [PR #1282](https://github.com/sourcey/startup-credits/pull/1282) was closed as a
+duplicate would favour #1276, but that call belongs to Sourcey, not to this worker.
+
+Everything on the contributor's side of #1276 was fixed anyway rather than left as-is: admission
+coverage went from 22/32 to 29/33 supported claims and `sourcey/validation` is green, with the
+three benefit descriptions bound to the source bullets, `profile.description` narrowed to what the
+cited page states, and consideration grounded in the published ZITADEL pricing. The remaining
+uncovered field is `economics.consideration`, which the cited startup page does not address at all.
+
+Rather than wait on someone else's duplicate, this delivery carries a different record that is
+already finished end to end: Hanko, merged on 2026-09-18 and live on the Sourcey catalog. Its
+evidence is set out above. No artifact delivered earlier on this claim was altered.
