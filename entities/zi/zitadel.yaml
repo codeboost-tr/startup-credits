@@ -30,6 +30,7 @@ offers:
     economics:
       consideration:
         kind: unknown
+        description: The program page does not state separate fees or other consideration for applying.
       benefits:
         - benefit_id: ben_cloud_features
           description: Use all features of ZITADEL Cloud
