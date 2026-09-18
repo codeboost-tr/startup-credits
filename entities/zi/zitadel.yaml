@@ -11,7 +11,7 @@ entity:
   category: auth-security
 profile:
   summary: ZITADEL provides an identity platform for authentication and user management, available as ZITADEL Cloud or self-hosted.
-  description: ZITADEL is an identity and access management platform providing authentication, authorization, and multi-tenancy for developers as managed cloud or self-hosted software.
+  description: ZITADEL builds an identity platform so that a startup does not have to, offered as ZITADEL Cloud or self-hosted.
   links:
     site: https://zitadel.com
 sources:
@@ -29,7 +29,7 @@ offers:
       effective_from: 2026-09-04T10:19:29.478Z
     economics:
       consideration:
-        kind: none
+        kind: unknown
       benefits:
         - benefit_id: ben_cloud_features
           description: Use all features of ZITADEL Cloud
