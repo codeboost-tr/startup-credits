@@ -11,52 +11,67 @@ entity:
   category: auth-security
 profile:
   summary: ZITADEL provides an identity platform for authentication and user management, available as ZITADEL Cloud or self-hosted.
-  description: ZITADEL builds an identity platform so that a startup does not have to, offered as ZITADEL Cloud or self-hosted.
+  description: ZITADEL provides an identity management platform that companies use as the managed ZITADEL Cloud service or self-host.
   links:
     site: https://zitadel.com
 sources:
   - source_id: src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41
     url: https://zitadel.com/startup
-  - source_id: src_e794754cd80e05b7c556e42bfd926db58ca7e9930434c6eefd7edc6502a7d653
-    url: https://zitadel.com/pricing
 programs: []
 offers:
   - offer_id: off_01m1nybq8q8qy5kjptseskndca
     offer_slug: zitadel-startup-program
     offer_slug_aliases: []
     title: ZITADEL Startup Program
-    summary: Financial credits toward ZITADEL Cloud plus all Cloud features and direct engineering sessions for the first 12 months of an approved startup's participation.
+    summary: Startups no more than 2 years old, with less than $2M in funding and investor or accelerator backing, get financial credits, all ZITADEL Cloud features, and sessions with ZITADEL engineers for their first 12 months.
     lifecycle:
       status: active
       effective_from: 2026-09-04T10:19:29.478Z
     economics:
       consideration:
-        kind: variable
-        description: The startup pays the ZITADEL Cloud plan price beyond the financial credits; the public list price is US$100 per month for Pro, with Free at US$0 per month and Enterprise priced custom.
+        kind: unknown
+        description: The startup page does not publish the credit amount or establish separate consideration for the program.
       benefits:
         - benefit_id: ben_cloud_features
-          description: Use all features of ZITADEL Cloud
+          description: Use of all ZITADEL Cloud features in the first 12 months
           kind: other
         - benefit_id: ben_engineers
-          description: Talk directly to our engineers
+          description: Direct sessions with ZITADEL engineers to validate identity management
           kind: other
         - benefit_id: ben_financial_credits
-          description: Financial credits
+          description: Financial credits applied to the startup's ZITADEL Cloud team; the amount is not published
           kind: other
     eligibility:
       rule:
-        kind: manual
-        criterion_id: cri_requirement_01
-        statement: Company must have less than $2M in funding, be no more than 2 years old, and be backed by an investor or accelerator.
-        reason: not-machine-evaluable
+        kind: all
+        rules:
+          - criterion_id: cri_requirement_01
+            fact: company.funding_raised_usd
+            kind: predicate
+            operator: lt
+            statement: Company has less than $2M in funding.
+            value:
+              type: number
+              value: 2000000
+          - criterion_id: cri_requirement_02
+            fact: company.age_months
+            kind: predicate
+            operator: lte
+            statement: Company is no more than 2 years old.
+            value:
+              type: number
+              value: 24
+          - criterion_id: cri_requirement_03
+            kind: manual
+            reason: external-verification
+            statement: Company is backed by an investor or accelerator.
     roles:
       terms_authority_entity_id: ent_01m1nybq8qpz6bpzc6r7wtz2ct
       access_operator_entity_id: ent_01m1nybq8qpz6bpzc6r7wtz2ct
     access:
       availability: public
       method: form
-      url: https://share-eu1.hsforms.com/1JgHRqQyXRXic8xlGUVMzRA2dljbt
-      instructions: Verify eligibility, register and submit the startup program form; ZITADEL assesses the application, sends details by email, and applies credits to the Team account.
+      url: https://zitadel.com/startup
+      instructions: Register through the form on the ZITADEL startup page. ZITADEL reviews the application, emails further details, and applies the financial credits to the startup's team after it signs up for ZITADEL Cloud.
     source_ids:
       - src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41
-      - src_e794754cd80e05b7c556e42bfd926db58ca7e9930434c6eefd7edc6502a7d653
