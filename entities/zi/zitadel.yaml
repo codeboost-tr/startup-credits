@@ -29,17 +29,16 @@ offers:
       effective_from: 2026-09-04T10:19:29.478Z
     economics:
       consideration:
-        kind: unknown
-        description: The startup page does not publish the credit amount or establish separate consideration for the program.
+        kind: none
       benefits:
         - benefit_id: ben_cloud_features
-          description: Use of all ZITADEL Cloud features in the first 12 months
+          description: Use all features of ZITADEL Cloud
           kind: other
         - benefit_id: ben_engineers
-          description: Direct sessions with ZITADEL engineers to validate identity management
+          description: Talk directly to our engineers
           kind: other
         - benefit_id: ben_financial_credits
-          description: Financial credits applied to the startup's ZITADEL Cloud team; the amount is not published
+          description: Financial credits
           kind: other
     eligibility:
       rule:
@@ -71,7 +70,7 @@ offers:
     access:
       availability: public
       method: form
-      url: https://zitadel.com/startup
+      url: https://share-eu1.hsforms.com/1JgHRqQyXRXic8xlGUVMzRA2dljbt
       instructions: Register through the form on the ZITADEL startup page. ZITADEL reviews the application, emails further details, and applies the financial credits to the startup's team after it signs up for ZITADEL Cloud.
     source_ids:
       - src_25f54f852ab833c8fb3ad75b9903c965461c2b5a37bdfee5ac45f75e18d0df41
